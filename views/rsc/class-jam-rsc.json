@@ -1,0 +1,29 @@
+{
+    "ca":[
+        {"content":{
+            "items":[
+                {
+                    "id":"as1",
+                    "title":"Assemblea 1",
+                    "description":"Descripció assemblea 1",
+                    "filename":"as1.zip"
+                     },
+                {
+                   "id":"as2",
+                   "title":"Assemblea 2",
+                   "description":"Descripció assemblea 2",
+                   "filename":"as2.zip"
+                    },
+                {
+                    "id":"as3",
+                    "title":"Assemblea 3",
+                    "description":"Descripció assemblea 3",
+                    "filename":"as3"
+                     }
+                ]
+            }
+        }
+    ]
+}
+                     
+                

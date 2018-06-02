@@ -1,0 +1,54 @@
+
+
+#HelperSections{
+    border-right: 1px solid #BDBDBD;
+    overflow-y: auto;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 0.9em;
+
+}
+
+#mainMenu{
+    padding-left:0px;
+}
+
+.langItem{
+    display: block;
+    float: left;
+    z-index: 10000;
+}
+
+.langItem:hover{
+    cursor: pointer !important;
+}
+
+/*#HelperMenu{
+    /*text-indent: -16px;* /
+    position:fixed;
+}*/
+
+.mdDoc, .link{
+    color: #aaaaaa;
+}
+
+#content{
+    overflow-y: auto;   
+}
+
+ul.list{
+    list-style-type: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.mdDoc:hover, .link:hover{
+    cursor:pointer;
+    color: #757575;
+}
+
+li.mdDoc, li.link{
+    line-height: 2em;
+    font-variant: small-caps;
+    
+}
