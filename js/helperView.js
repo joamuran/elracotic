@@ -60,7 +60,7 @@ class helperView{
                 // If has own property items, we have to create submenu
                 var submenu=self.createMenu(item[i].item.items, item[i].item.title, helpManual);
                 li.setAttribute("class", "link");
-                $(submenu[0]).css("display", "block");
+                //$(submenu[0]).css("display", "block");
                 li.appendChild(submenu);
             } else {
                 // adding link to menu entry
@@ -131,18 +131,108 @@ class helperView{
                         console.log("clickl on linkl");
                         console.log(e.target);
             
-                        console.log(e.target.children[0].visiblechild);
+                        //console.log(e.target.children[0].visiblechild);
                         // Setting children visibility
-                         if (e.target.children[0].visiblechild==="none")
-                            e.target.children[0].visiblechild="block";
-                        else e.target.children[0].visiblechild="none"
+
+                        var selected=$(e.target);
+
+                        console.log($(selected));
+                        console.log($(selected).first().attr("visiblechild"));
+                        console.log($(selected).first().css("display"));
+
+                        
+                        console.log ($($(selected).first().children()).children().first().css("display"));
+
+
+                        if($($(selected).first().children()).children().first().css("display")!="none"){
+                            $($(selected).first().children()).children().css("display", "none");
+
+                            // WIP: Casca amb més d'un nivell d'anidament
+
+                            /*$.each($($(selected).first().children()).children(), function(key, value){
+                                
+                                if($(value).attr("class")=="link") //$(value).children().css("display", "none");
+                                    $($(value).first().children()).children().css("display", "none");
+                            })*/
+                        }
+                        else{
+                            $($(selected).first().children()).children().css("display", "list-item");
+
+                            /*$.each($($(selected).first().children()).children(), function(key, value){
+                                
+                                if($(value).attr("class")=="link") //$(value).children().css("display", "none");
+                                    $($(value).first().children()).children().css("display", "none");
+                            })*/
+                        }
+
+
+                        //$($(temp0).first().children()).children().first().css("display")
+                        //$($(temp0).first().children()).children().css("display", "none")
+
+                        /*if (e.target.children[0].visiblechild==="none")
+                            {
+                                e.target.children[0].visiblechild="block";
+                                console.log($(e.target.children[0]).children());
+                                $(e.target.children[0]).children().css("display", "block");
+                                $(e.target.children[0]).children().find(".link").css("display", "block");
+                                //$(e.target.children[0]).find("ul > li").css("display", "block");
+                                // WIP HERE
+                                
+                                //console.log($(e.target));
+                                //console.log($(e.target).find("link"));
+
+                                
+
+                        } else {
+                            e.target.children[0].visiblechild="none"
+                            //$(e.target.children[0]).find("ul > li").css("display", "none");
+                            $(e.target.children[0]).children().css("display", "none");
+                            $(e.target.children[0]).children().find(".link").css("display", "none");
+                        }*/
+
+
+
+                         /*if (e.target.children[0].visiblechild==="none")
+                            {
+                                e.target.children[0].visiblechild="block";
+                                console.log($(e.target.children[0]).children());
+                                $(e.target.children[0]).children().css("display", "block");
+                                $(e.target.children[0]).children().find(".link").css("display", "block");
+                                //$(e.target.children[0]).find("ul > li").css("display", "block");
+                                // WIP HERE
+                                
+                                //console.log($(e.target));
+                                //console.log($(e.target).find("link"));
+
+                                
+
+                        } else {
+                            e.target.children[0].visiblechild="none"
+                            //$(e.target.children[0]).find("ul > li").css("display", "none");
+                            $(e.target.children[0]).children().css("display", "none");
+                            $(e.target.children[0]).children().find(".link").css("display", "none");
+                        }*/
             
-                        for (var i=0; i<e.target.children[0].children.length; i++){
-                        console.log(i);
-                        console.log(e.target.children[0].children[i]);
+                      /*  for (var i=0; i<e.target.children[0].children.length; i++){    
+                            //console.log(i);
+                            //console.log(e.target.children[0].children[i]);
+                            //console.log((typeof(e.target).children[0].children[i].children[0]));
                             
                             e.target.children[0].children[i].style.display=e.target.children[0].visiblechild;
-                        }
+                            if((typeof(e.target).children[0].children[i].children[0])!=="undefined")
+                            {
+                                console.log("!!!!!");
+                                console.log(e.target.children[0].children[i].children[0].children);
+                                for (var j=0; j<e.target.children[0].children[i].children[0].children.length; j++){
+                                    
+                                    console.log("*************");
+                                    console.log(e.target.children[0].children[i].children[0]);
+                                    console.log(j);
+                                    e.target.children[0].children[i].children[0].children[j].style.display="block";
+                                }
+                            }
+
+                        }*/
 
                     });
 

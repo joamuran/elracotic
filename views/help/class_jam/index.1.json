@@ -17,9 +17,18 @@
                 }},
                 {"item": {
                     "title":"La finestra principal: Components i menús",
-                    "filename":"1.4.finestra_principal.md"
+                    "items":[
+                        {"item": {
+                            "title":"El mode de configuració: Components i menús",
+                            "filename":""
+                        }},
+                        {"item": {
+                            "title":"El mode Assemblea: Components i menús",
+                            "filename":""
+                        }}
+                    ]
+                    
                 }}
-                
             ]}},
                 {"item": {
                     "title":"Components",
