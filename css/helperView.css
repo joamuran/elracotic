@@ -33,7 +33,9 @@
 }
 
 #content{
-    overflow-y: auto;   
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 85vh;
 }
 
 ul.list{

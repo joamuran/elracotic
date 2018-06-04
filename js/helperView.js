@@ -43,7 +43,8 @@ class helperView{
         var ul=document.createElement("ul");
         ul.setAttribute("id", menuid);
         
-        ul.visiblechild="none";
+        //ul.visiblechild="none";
+        ul.setAttribute("visiblechild","none");
         ul.setAttribute("class", "list");
     
     
@@ -126,8 +127,8 @@ class helperView{
 
 
                     $("li.link").on("click", function(e){
+                        e.stopPropagation();
                         
-
                         console.log("clickl on linkl");
                         console.log(e.target);
             
@@ -136,103 +137,18 @@ class helperView{
 
                         var selected=$(e.target);
 
-                        console.log($(selected));
-                        console.log($(selected).first().attr("visiblechild"));
-                        console.log($(selected).first().css("display"));
+                        console.log(selected);
 
-                        
-                        console.log ($($(selected).first().children()).children().first().css("display"));
-
-
-                        if($($(selected).first().children()).children().first().css("display")!="none"){
-                            $($(selected).first().children()).children().css("display", "none");
-
-                            // WIP: Casca amb més d'un nivell d'anidament
-
-                            /*$.each($($(selected).first().children()).children(), function(key, value){
-                                
-                                if($(value).attr("class")=="link") //$(value).children().css("display", "none");
-                                    $($(value).first().children()).children().css("display", "none");
-                            })*/
-                        }
-                        else{
-                            $($(selected).first().children()).children().css("display", "list-item");
-
-                            /*$.each($($(selected).first().children()).children(), function(key, value){
-                                
-                                if($(value).attr("class")=="link") //$(value).children().css("display", "none");
-                                    $($(value).first().children()).children().css("display", "none");
-                            })*/
-                        }
-
-
-                        //$($(temp0).first().children()).children().first().css("display")
-                        //$($(temp0).first().children()).children().css("display", "none")
-
-                        /*if (e.target.children[0].visiblechild==="none")
-                            {
-                                e.target.children[0].visiblechild="block";
-                                console.log($(e.target.children[0]).children());
-                                $(e.target.children[0]).children().css("display", "block");
-                                $(e.target.children[0]).children().find(".link").css("display", "block");
-                                //$(e.target.children[0]).find("ul > li").css("display", "block");
-                                // WIP HERE
-                                
-                                //console.log($(e.target));
-                                //console.log($(e.target).find("link"));
-
-                                
-
-                        } else {
-                            e.target.children[0].visiblechild="none"
-                            //$(e.target.children[0]).find("ul > li").css("display", "none");
-                            $(e.target.children[0]).children().css("display", "none");
-                            $(e.target.children[0]).children().find(".link").css("display", "none");
-                        }*/
-
-
-
-                         /*if (e.target.children[0].visiblechild==="none")
-                            {
-                                e.target.children[0].visiblechild="block";
-                                console.log($(e.target.children[0]).children());
-                                $(e.target.children[0]).children().css("display", "block");
-                                $(e.target.children[0]).children().find(".link").css("display", "block");
-                                //$(e.target.children[0]).find("ul > li").css("display", "block");
-                                // WIP HERE
-                                
-                                //console.log($(e.target));
-                                //console.log($(e.target).find("link"));
-
-                                
-
-                        } else {
-                            e.target.children[0].visiblechild="none"
-                            //$(e.target.children[0]).find("ul > li").css("display", "none");
-                            $(e.target.children[0]).children().css("display", "none");
-                            $(e.target.children[0]).children().find(".link").css("display", "none");
-                        }*/
-            
-                      /*  for (var i=0; i<e.target.children[0].children.length; i++){    
-                            //console.log(i);
-                            //console.log(e.target.children[0].children[i]);
-                            //console.log((typeof(e.target).children[0].children[i].children[0]));
+                        if($(selected).find("ul").attr("visiblechild")==="none"){
+                            $(selected).find("ul").children().css("display", "list-item");
+                            $(selected).find("ul").attr("visiblechild", "visible");
                             
-                            e.target.children[0].children[i].style.display=e.target.children[0].visiblechild;
-                            if((typeof(e.target).children[0].children[i].children[0])!=="undefined")
-                            {
-                                console.log("!!!!!");
-                                console.log(e.target.children[0].children[i].children[0].children);
-                                for (var j=0; j<e.target.children[0].children[i].children[0].children.length; j++){
-                                    
-                                    console.log("*************");
-                                    console.log(e.target.children[0].children[i].children[0]);
-                                    console.log(j);
-                                    e.target.children[0].children[i].children[0].children[j].style.display="block";
-                                }
-                            }
-
-                        }*/
+                            $(selected).children().find("ul").attr("visiblechild", "none");
+                            $(selected).children().find("ul").children().css("display", "none");
+                        } else {
+                            $(selected).find("ul").children().css("display", "none");
+                            $(selected).find("ul").attr("visiblechild", "none");
+                        }
 
                     });
 
