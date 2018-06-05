@@ -43,7 +43,7 @@
                         }},
                         {"item": {
                             "title":"2.2. Component de selecció d'estació:  Configuració i funcionament",
-                            "filename":""
+                            "filename":"2.2.selector_estacio.md"
                         }},
                         {"item": {
                             "title":"2.3. Component de selecció de l'oratge:  Configuració i funcionament",
@@ -73,6 +73,10 @@
                     "items": [
                         {"item": {
                             "title":"3.1. Importar i exportar assemblees",
+                            "filename":""
+                        }},
+                        {"item": {
+                            "title":"3.2. Formats de vídeo i conversió",
                             "filename":""
                         }},
                         {"item": {

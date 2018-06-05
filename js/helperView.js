@@ -93,6 +93,19 @@ class helperView{
         function( data ) {
             $("#content").empty();
             $("#content").append(data);
+
+            // WIP HERE::::::
+            var elmnt = document.getElementById("content");
+            elmt.scrollTop;
+
+            $(".link_to_help").on("click", function(ev){
+                alert("click");
+                
+                var target=$(ev.target).attr("href");
+                console.log(target);
+                $("[target='"+target+"']").click();
+            });
+
         });
     };
 
@@ -151,13 +164,10 @@ class helperView{
                         }
 
                     });
-
-                     
+ 
                 });
             });
-             
             
-
         });
 
     }
@@ -222,12 +232,14 @@ class helperView{
 
             }
 
+
             /*var backBt=$(document.createElement("div")).addClass("btn btn-sm btn-secondary");
             var backBttext=$(document.createTextNode(" Torna enrere"));
             var backicon=$(document.createElement("span")).addClass("glyphicon glyphicon-chevron-left");
             $(backBt).append(backicon, backBttext);
             $("#mainContainer").append(backBt);*/
 
+            // 
 
             //$.get( window.location+"section/rscView",
              //   function( data ) {

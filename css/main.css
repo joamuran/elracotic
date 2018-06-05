@@ -32,6 +32,13 @@ img[alt=image_25_percent_width] { width: 25%; margin-left: auto; margin-right: a
     animation: ease all 0.5s;* /
 }*/
 
+.link_to_help{
+    color:#0000ff;
+}
+.link_to_help:hover{
+    cursor: pointer;
+}
+
 div#mdDoc{
     background: #ffcccc;
 }
