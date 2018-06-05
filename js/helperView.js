@@ -86,23 +86,19 @@ class helperView{
     }
     
 
-    loadMDDoc(document){
-        console.log("getting "+window.location+document);
+    loadMDDoc(doc){
+        console.log("getting "+window.location+doc);
 
-        $.get( window.location+document,
+        $.get( window.location+doc,
         function( data ) {
             $("#content").empty();
             $("#content").append(data);
 
-            // WIP HERE::::::
-            var elmnt = document.getElementById("content");
-            elmt.scrollTop;
+            // Move to top of document
+            document.getElementById("content").scrollTo(0,0);
 
             $(".link_to_help").on("click", function(ev){
-                alert("click");
-                
                 var target=$(ev.target).attr("href");
-                console.log(target);
                 $("[target='"+target+"']").click();
             });
 

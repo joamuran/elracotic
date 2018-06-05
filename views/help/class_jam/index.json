@@ -47,11 +47,11 @@
                         }},
                         {"item": {
                             "title":"2.3. Component de selecció de l'oratge:  Configuració i funcionament",
-                            "filename":""
+                            "filename":"2.3.selector_oratge.md"
                         }},
                         {"item": {
                             "title":"2.4. Component de selecció del dia:  Configuració i funcionament",
-                            "filename":""
+                            "filename":"2.4.selector_dia.md"
                         }},
                         {"item": {
                             "title":"2.5. Component d'activitats: Configuració i funcionament",
