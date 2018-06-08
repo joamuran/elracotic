@@ -30,8 +30,14 @@ class MDReader {
         // Returns HTML code for markdown file specified
 
         //error_log($filename);
-        $imgBasePath="/elracotic/views/help/";
+        //$imgBasePath="/elracotic/views/help/";
+    
+        // Reemplaçar  "/elracotic" per "/" en producció
 
+        $APP_BASE_PATH="/elracotic";
+        $imgBasePath=$APP_BASE_PATH."/views/help/";
+        error_log($imgBasePath);
+        
         if (file_exists("views/help/$help/$page"))
             $content=file_get_contents("views/help/$help/$page");
         else $content="# File does not exists.\n $page has not been created yet.";
