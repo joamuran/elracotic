@@ -18,7 +18,25 @@
 
     <body>
         <?php require("nav.php");?>
+
+    <header class="masthead d-flex" id="landing_page">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">El Racó TIC</h1>
+        <h3 class="mb-5">
+          <em>d'Educació Especial</em>
+        </h3>
+        <p><em>CPEE Miquel Burguera. Sueca.</em></p>
+        <!--a class="btn btn-primary btn-xl js-scroll-trigger" href="elracotic/">Comencem!</a-->
+      </div>
+      <div class="overlay"></div>
+    </header>
+
         <div id="mainContainer" class="container">
+
+    
+
+
+
         </div>
 
           <!--p>Glass icon on a styled link button:
@@ -28,6 +46,7 @@
       </p!--> 
 
     <script src="lib/jquery-3.3.1.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/helperView.js"></script>
     <script src="js/main.js"></script>

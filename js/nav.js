@@ -13,7 +13,10 @@ class navController{
         for (var i=0; i<links.length;i++){
             links[i].addEventListener("click", function(e){
                 var section=e.target.getAttribute("href");
-                self.loadSection(section);
+                $("#landing_page").fadeOut("normal", function(){
+                    $(this).removeClass("masthead").empty().addClass("hidden_head");
+                    self.loadSection(section);
+                });     
             });
         }
     }
@@ -23,32 +26,36 @@ class navController{
 
         $.get( window.location+section,
         function( data ) {
+
+            // Potser ara que la pagina inicial ja te contingut, no cal mirar si és un cas o
            if ($("#mainContainer").children().length==0)
             {
-                $("#mainContainer").append($(data));
-                $("#mainContainer").children().fadeIn();
-
-                // Rebinding new events
-                self.cms.bindEvents();
-                
+                $("#mainContainer").fadeOut(function(){
+                    $("#mainContainer").append($(data));
+                    $("#mainContainer").fadeIn();
+                    // Rebinding new events
+                    self.cms.bindEvents();
+                })
             }
             else {
-                $("#mainContainer").children().fadeOut(function(){
-                $("#mainContainer").empty();
-                $("#mainContainer").append($(data));
-                $("#mainContainer").children().fadeIn();
+                $("#mainContainer").fadeOut(function(){
 
-                // Rebinding new events
-                self.cms.bindEvents();
-            });
-            
-            
+                    $("#mainContainer").children().fadeOut(function(){
+                    $("#mainContainer").empty();
+                    $("#mainContainer").append($(data));
+                    $("#mainContainer").fadeIn();
+
+                    // Rebinding new events
+                    self.cms.bindEvents();
+
+                    });
+                });
             }
-            
-
           });
     }
-};
+
+}
+
 
 
 /*(function() {
