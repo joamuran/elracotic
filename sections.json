@@ -1,8 +1,15 @@
 {
     "Què som?":{
+        "type":"section",
         "index":"quesom"
     },
     "Class Jam":{
+        "type":"section",
         "index":"classjam"
+    },
+    "PIE 2017":{
+        "type":"link",
+        "index":"piie2017/index.html"
     }
+
 }

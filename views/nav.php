@@ -26,9 +26,16 @@
                     RecursiveIteratorIterator::SELF_FIRST);*/
 
                 foreach ($sections as $item => $val) {
+                  $link_class="nav-link";
+                  $href="section/".$val['index'];
+                  if ($val['type']=="link") {
+                    $link_class="nav-link external-link";
+                    $href=$val['index'];
+                  }
+                  
                     ?>
                     <li class="nav-item active">
-                    <div class="nav-link" href="section/<?php echo ($val['index']); ?>"><?php echo $item;?>
+                    <div class="<?php echo ($link_class);?>" href="<?php echo ($href);?>"><?php echo $item;?>
                       <span class="sr-only">(current)</span>
                     </div>
                   </li>

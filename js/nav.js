@@ -9,7 +9,7 @@ class navController{
         console.log("Binding events");
 
         var self=this;
-        var links=document.querySelectorAll(".nav-link");
+        var links=document.querySelectorAll(":not(.external-link).nav-link");
         for (var i=0; i<links.length;i++){
             links[i].addEventListener("click", function(e){
                 var section=e.target.getAttribute("href");
@@ -19,6 +19,18 @@ class navController{
                 });     
             });
         }
+
+
+        links=document.querySelectorAll(".external-link");
+        for (var i=0; i<links.length;i++){
+            links[i].addEventListener("click", function(e){
+                var lnk=e.target.getAttribute("href");
+                document.location=lnk;
+                
+            });
+        }
+
+
     }
 
     loadSection(section){
