@@ -93,3 +93,23 @@ div#mdDoc>h1{color: #ff0000;}
   }
 
   
+.piie2017{
+    position: absolute;
+    top: 75px;
+    right: 150px;
+    height: 1.7em;
+    font-size: 0.9em;
+    /*padding-top: 50%;*/
+    width: 10em;
+    text-align: center;
+    border-radius:1em;
+    background-color: #ff00ff;
+    color: #ffffff !important;
+}
+
+.piie2017 > a { 
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+  

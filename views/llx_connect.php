@@ -1,8 +1,9 @@
 <?php
 require_once('markdownparser.php');
 
-$text="#Class Jam
+$text="#LliureX Connext
 
+L'eina classjam 
 Una de les pràctiques habituals en les aules d'infantil, primària i educació especial és la realització de l'assemblea o el racó d'aula. L'eina Class Jam ens dóna la possibilitat de realitar aquesta assemblea d'aula de forma interactiva amb la pissarra digital.
 
 D'entre tot l'alumnat a qui va dirigida l'aplicació, aquesta té especial interès per als alumnes de centres d'educació especial, ja que aquests requereixen una major estimulació en tot allò que fan. El fet de realitzar aquestes primeres rutines del dia de forma interactiva i visual, pot ser força positiu per a ells.
@@ -11,14 +12,7 @@ D'entre tot l'alumnat a qui va dirigida l'aplicació, aquesta té especial inter
 Es tracta d'una aplicació d'escriptori per a LliureX basada en tecnologia web, el que aporta una interfície d'usuari molt amigable i senzilla.
 
 L'aplicació disposa de diferents components, que li aporten la funcionalitat, i que permeten:
-
-* Triar el dia de la setmana,
-* Decidir l'oratge d'avui,
-* Establir l'estació de l'any,
-* Escollir el mes actual,
-* Passar llista, per veure quins companys han vingut a classe i quins s'han quedat a casa.
-* Fer una revisió de les activitats que realitzaran durant el dia.
-* Anticipar el menú que tindran al menjador.";
+";
 
 $reader = new MDReader();
 

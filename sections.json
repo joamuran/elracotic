@@ -7,6 +7,14 @@
         "type":"section",
         "index":"classjam"
     },
+    "LliureX Connect":{
+        "type":"section",
+        "index":"llx_connect"
+    },
+    "Eines TEA/SAAC":{
+        "type":"section",
+        "index":"tea_saac"
+    },
     "PIE 2017":{
         "type":"link",
         "index":"piie2017/index.html"
