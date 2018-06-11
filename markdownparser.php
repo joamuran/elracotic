@@ -32,14 +32,13 @@ class MDReader {
         //error_log($filename);
         //$imgBasePath="/elracotic/views/help/";
     
-        // Reemplaçar  "/elracotic" per "/" en producció
-
+        // Reemplaçar  "/elracotic" per "" en producció
         if ($_SERVER["HTTP_HOST"]=="127.0.0.1"){
             // running from 127.0.0.1
             $APP_BASE_PATH="/elracotic";
         } else {
             // running on www.elracotic.net
-            $APP_BASE_PATH="/";
+            $APP_BASE_PATH="";
         }
 
         
