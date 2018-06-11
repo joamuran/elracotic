@@ -46,7 +46,8 @@
       </p!--> 
 
     <script src="lib/jquery-3.3.1.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--script src="lib/bootstrap/js/bootstrap.js"></script-->
     <script src="js/nav.js"></script>
     <script src="js/helperView.js"></script>
     <script src="js/main.js"></script>

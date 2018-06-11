@@ -1,17 +1,34 @@
+<a class="piie2017" href="piie2017/saac/arasuite1/" data-toggle="tooltip" data-placement="bottom" title="Aquest contingut es correspon al treball realitzat durant el 2017. És possible que algunes parts estiguen desactualitzades i que estiguem treballant per millorar-les.">
+PIIE 2017
+</a>
+
+<!--a href="#" data-toggle="tooltip" data-placement="bottom" title="Pajaritos!">pajaritos tralari</a-->
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+
 <?php
 require_once('markdownparser.php');
 
-$text="#LliureX Connext
+$text="#LliureX Connect
 
-L'eina classjam 
-Una de les pràctiques habituals en les aules d'infantil, primària i educació especial és la realització de l'assemblea o el racó d'aula. L'eina Class Jam ens dóna la possibilitat de realitar aquesta assemblea d'aula de forma interactiva amb la pissarra digital.
+L'ús de tauletes i aplicacions en dispositius mòbils són cada vegada més freqüents als nostres centres. Les tauletes suposen un nou recurs, innovador, i que aporta una gran quantitat de recursos en forma d'apps, que no poden utilitzar-se a l'ordinador. Per una altra banda, el tamany i la versatilitat de les tauletes, possibiliten l'accés a les TIC a alumnes amb mobilitat reduïda o amb alguna discapacitat cognitiva o retard que fa que l'aparició d'ombres a la projecció de les PDI provoque confussions.
 
-D'entre tot l'alumnat a qui va dirigida l'aplicació, aquesta té especial interès per als alumnes de centres d'educació especial, ja que aquests requereixen una major estimulació en tot allò que fan. El fet de realitzar aquestes primeres rutines del dia de forma interactiva i visual, pot ser força positiu per a ells.
+En aquest context, ens vam plantejar com poder fer que el treball que realitza un alumne a la tauleta es pugués compartir amb els companys a través del canó i la PDI. Després d'analitzar vàrias alternatives, es va proposar un model on l'ordinador de l'aula fera de pont entre la tauleta i el projector, i es connectara a la tauleta a través d'una connexió wifi. Per a això es va desenvolupar l'eina Lliurex Connect, que ajuden a la instal·lació necessària de les aplicacions necessàries a la tauleta, i que gestionava les connexions inalàmbriques, així com ens feia d'assistent per a la connexió tauleta-ordinador/ordinador-tauleta.
 
-## Què és l'eina Class Jam (Assemblea d'Aula)?
-Es tracta d'una aplicació d'escriptori per a LliureX basada en tecnologia web, el que aporta una interfície d'usuari molt amigable i senzilla.
+Per altra banda, les aplicacions necessàries a la tauleta són el Screen Cast, que permet enviar la pantalla de la tauleta a l'ordinador, i la XSDL Server, un servidor gràfic que permet mostrar en les tauletes Android aplicacions que s'executen a l'ordinador.
 
-L'aplicació disposa de diferents components, que li aporten la funcionalitat, i que permeten:
+De tota manera, es va detectar cert retard a l'hora de sincronitzar ambdues aplicacions amb l'ordinador, de manera que quan s'utilitzàven les dos conjuntament, per tal d'executar aplicacions de l'ordinador en la tauleta i a més enviar el que s'està fent en la tauleta a l'ordinador, aquest retard implicava que el treball fos bastant complicat.
+
+Aquest curs s'ha estat barallant altres alternatives, però seguim treballant per tal de trobar una solució amb la que el treball puga ser més fluid que amb la solució existent.
+
+Si desitgeu utilitzar el LliureX Connect, trobareu tota la informació necessària [sobre la infrastructura necessària](piie2017/proposta/lliurex_connect/) i sobre la [instal·lació i ús de les eines de connexió](piie2017/proposta/lliurex_connect2/) al projecte del 2017, així com una [llista d'aplicacions educatives](piie2017/proposta/apps/) per a l'ús en tauletes.
+
+
 ";
 
 $reader = new MDReader();
@@ -20,58 +37,6 @@ echo $reader->processText($text);
 
 ?>
 
-<div class="row">
-    <!-- Go to help window -->
-    <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-            <span class="sb-preview-img racotic_link_help" href="help/class_jam">
-            <img class="card-img-top" src="./views/media/classjam_manual.png" alt="ClassJam Manual" />
-            </span>
-            <div class="card-body">
-                <h4 class="card-title">Class Jam Doc</h4>
-                <p class="card-text">Consulta la documentació del Class Jam</p>
-            </div>
-            <div class="card-footer">
-                <span href="help/class_jam" class="btn btn-secondary racotic_link_help">Vés-hi!</span>
-            </div>
-        </div>
-    </div>
 
 
-    <!-- Go to resources -->
-    <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-            <span class="sb-preview-img racotic_link_rsc" href="resources/class-jam-rsc">
-            <img class="card-img-top" src="./views/media/classjam_assemblees.png" alt="ClassJam Manual" />
-            </span>
-            <div class="card-body">
-                <h4 class="card-title">Jams (Assemblees)</h4>
-                <p class="card-text">Descarregueu assemblees ja configurades per utilitzar.</p>
-            </div>
-            <div class="card-footer">
-                <span href="resources/class_jam" class="btn btn-secondary racotic_link_rsc">Vés-hi!</span>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Go to videos -->
-    <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-            <span class="sb-preview-img racotic_link_help" href="help/class_jam">
-            <img class="card-img-top" src="./views/media/classjam_videotutorials.png" alt="ClassJam Manual" />
-            </span>
-            <div class="card-body">
-                <h4 class="card-title">Videotutorials</h4>
-                <p class="card-text">Consulteu els videotutorials.</p>
-            </div>
-            <div class="card-footer">
-                <span href="help/class_jam" class="btn btn-secondary racotic_link_help">Vés-hi!</span>
-            </div>
-        </div>
-    </div>
-
-
-
-</div> <!-- row -->
 
