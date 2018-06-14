@@ -45,6 +45,7 @@ class navController{
         function( data ) {
             $("#mainContainer").empty($(data));
             $("#mainContainer").append($(data));
+            self.cms.bindEvents();
 
             
             // Potser ara que la pagina inicial ja te contingut, no cal mirar si és un cas o
