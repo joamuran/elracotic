@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Michelf\\' => array($vendorDir . '/michelf/php-markdown/Michelf'),
+    'FontLib\\' => array($vendorDir . '/phenx/php-font-lib/src/FontLib'),
+    'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
 );

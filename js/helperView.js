@@ -91,8 +91,12 @@ class helperView{
 
         $.get( window.location+doc,
         function( data ) {
+            var printMe=$(document.createElement("div")).html("Print-me").attr("doc", window.location+doc).addClass("linkToPrint");
+            alert(window.location+ " * "+doc);
             $("#content").empty();
+            $("#content").append(printMe);
             $("#content").append(data);
+
 
             // Move to top of document
             document.getElementById("content").scrollTo(0,0);
@@ -100,6 +104,25 @@ class helperView{
             $(".link_to_help").on("click", function(ev){
                 var target=$(ev.target).attr("href");
                 $("[target='"+target+"']").click();
+            });
+
+            $(".linkToPrint").on("click", function(ev){
+                var target=$(ev.target).attr("doc");
+        
+             /*   $.get( window.location+doc,
+                    function( data ) {
+                        var printMe=$(document.createElement("div")).html("Print-me").attr("doc", window.location+doc).addClass("linkToPrint");
+                        $("#content").empty();
+                        $("#content").append(printMe);
+                        $("#content").append(data);
+                    })
+                });*/
+                
+
+                
+
+
+
             });
 
         });

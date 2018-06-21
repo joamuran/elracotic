@@ -64,7 +64,34 @@ class Controller {
 
             }
 
-        break;
+            break;
+
+            case "getpdf":
+                // Count argument list to distinguish if it's a general help or a page
+                //if (count($this->_arglist)==1){
+                    
+                    //$help=$this->_arglist[0]; // First argument is help folder
+                    //require("views/help/".$help."/index.json");
+                //} else {
+                $reader = new MDReader();
+                $help=$this->_arglist[0];
+                $page=$this->_arglist[1];
+                    
+                if ($this->_arglist[1]=="__empty__") {
+                    $error_text="#Error \nPage not defined in index.";
+                    echo $reader->processText($error_text);
+                    return -1;
+                }
+
+                $text=$reader->getDocFromHelp($help, $page);
+                $HTMLText=$reader->processPdf($text);
+
+                
+
+
+
+
+            break;
 
             case "resources":
                 $rsc=$this->_arglist[0];
