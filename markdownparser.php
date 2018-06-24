@@ -73,15 +73,15 @@ class MDReader {
         // Returns HTML code for markdown text
         $my_html_prev = MarkdownExtra::defaultTransform($text);
 
-        $my_html = '<html><head><link rel="stylesheet" type="text/css" href="http://127.0.0.1/elracotic/css/helperView.css">
-        </head><body>'.$my_html_prev.'</body></html>';
+        /// $my_html = '<html><head><link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+        $my_html = '<html><head><link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="css/pdf.css">
+        </head><body class="mypdf">'.$my_html_prev.'</body></html>';
 
         // WIP HERE
         // Docs: https://codeengineered.com/blog/2014/convert-markdown-pdf-using-php/
         // https://github.com/alanshaw/markdown-pdf
 
-        // Sembla que no pille els css, cal fer les imatges que respecten el tamany,
-        // i acoplar estils en general
+        // el pdf.css ho pilla bé, cal ajustar imatges menudes com les de: 127.0.0.1/elracotic/getpdf/class_jam/1.4.3.mode_assemblea.md
 
 
         error_log($my_html);
