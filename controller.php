@@ -84,7 +84,7 @@ class Controller {
                 }
 
                 $text=$reader->getDocFromHelp($help, $page);
-                $HTMLText=$reader->processPdf($text);
+                $HTMLText=$reader->processPdf($text, $page);
 
                 
 

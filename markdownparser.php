@@ -69,20 +69,14 @@ class MDReader {
         return $my_html;
      }
 
-     public function processPDF($text) {
+     public function processPDF($text, $filename) {
         // Returns HTML code for markdown text
         $my_html_prev = MarkdownExtra::defaultTransform($text);
 
         /// $my_html = '<html><head><link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
-        $my_html = '<html><head><link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="css/pdf.css">
+        //$my_html = '<html><head><link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="css/pdf.css">
+        $my_html = '<html><head><link rel="stylesheet" type="text/css" href="css/pdf.css">
         </head><body class="mypdf">'.$my_html_prev.'</body></html>';
-
-        // WIP HERE
-        // Docs: https://codeengineered.com/blog/2014/convert-markdown-pdf-using-php/
-        // https://github.com/alanshaw/markdown-pdf
-
-        // el pdf.css ho pilla bé, cal ajustar imatges menudes com les de: 127.0.0.1/elracotic/getpdf/class_jam/1.4.3.mode_assemblea.md
-
 
         error_log($my_html);
         // instantiate and use the dompdf class
@@ -90,6 +84,8 @@ class MDReader {
 
         $options = new Options();
         $options->setIsRemoteEnabled(true);
+        $options->setIsHtml5ParserEnabled(true);
+
         $dompdf->setOptions($options);
         
         $dompdf->loadHtml($my_html);
@@ -101,9 +97,7 @@ class MDReader {
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        $dompdf->stream();
-
-
+        $dompdf->stream(preg_replace("/.md$/i", "", $filename));
 
         //return $my_html;
      }

@@ -121,4 +121,18 @@ div#mdDoc>h1{color: #ff0000;}
     /*font-size: 20px;*/
 }
 
+.linkToPrint{
+    width:2.5em;
+    height: 2.5em;
+    float: right;
+    clear: both;
+    width: 100%;
+    background-position: right;
+    background-image: url(icons/printer.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
+.linkToPrint:hover{
+    cursor: pointer;
+}

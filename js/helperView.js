@@ -91,8 +91,8 @@ class helperView{
 
         $.get( window.location+doc,
         function( data ) {
-            var printMe=$(document.createElement("div")).html("Print-me").attr("doc", window.location+doc).addClass("linkToPrint");
-            alert(window.location+ " * "+doc);
+            var printMe=$(document.createElement("div")).attr("doc", window.location+doc).addClass("linkToPrint");
+            //alert(window.location+ " * "+doc);
             $("#content").empty();
             $("#content").append(printMe);
             $("#content").append(data);
@@ -108,21 +108,9 @@ class helperView{
 
             $(".linkToPrint").on("click", function(ev){
                 var target=$(ev.target).attr("doc");
-        
-             /*   $.get( window.location+doc,
-                    function( data ) {
-                        var printMe=$(document.createElement("div")).html("Print-me").attr("doc", window.location+doc).addClass("linkToPrint");
-                        $("#content").empty();
-                        $("#content").append(printMe);
-                        $("#content").append(data);
-                    })
-                });*/
-                
-
-                
-
-
-
+                //alert(target);
+                var pdf=target.replace("/help/", "/getpdf/");
+                document.location=pdf;
             });
 
         });

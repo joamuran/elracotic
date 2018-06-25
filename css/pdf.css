@@ -1,14 +1,27 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: justify;
 }
 
-/*img {
-    width: 50%;
-    margin-left: 25%;    
-}*/
+p{
+    text-align: justify;
+}
 
 img[alt=image_100_percent_width] { width: 100%;}
 img[alt=image_75_percent_width] { width: 75%; margin-left: 12%}
 img[alt=image_50_percent_width] { width: 50%; margin-left: 25%}
 img[alt=image_25_percent_width] { width: 25%; margin-left: 37%}
+
+.col-md-1>img, .col-md-2>img, .col-md-3>img, .col-md-4>img,
+.col-md-5>img, .col-md-6>img, .col-md-7>img, .col-md-8>img, 
+.col-md-9>img, .col-md-10>img, .col-md-11>img, .col-md-12>img{
+    width: 20% !important;
+    margin-left: 40%;
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+    display: block;
+    width:60%;
+    margin-left: 20%;
+    clear:both;
+}
