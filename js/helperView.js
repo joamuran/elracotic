@@ -200,7 +200,8 @@ class helperView{
                 $("#mainContainer").empty();
                 var content="<h1>Videotutorials</h1>";
                 content+="<p>En aquesta secció trobareu diversos videotutorials que expliquen el funcionament de l'eina ClassJam. Utilitzeu el botó de la part superior-esquerra del vídeo per desplegar la llista de vídeos del tutorial.</p>";
-                content+="<div style='text-align:center'>";
+                content+="<div class='embed-responsive embed-responsive-16by9'>";
+                data.replace('iframe', 'iframe class="embed-responsive-item"');
                 content+=data+"</div>";
                 $("#mainContainer").html(content);
             });

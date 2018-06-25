@@ -3,23 +3,17 @@
         {"content":{
             "items":[
                 {
-                    "id":"as1",
-                    "title":"Assemblea 1",
-                    "description":"Descripció assemblea 1",
-                    "filename":"as1.zip"
+                    "id":"as_inf",
+                    "title":"Assemblea d'infantil",
+                    "description":"Model d'assemblea per a l'etapa d'infantil. Amb aquesta proposta d'assemblea, els més menuts podran passar llista, aprendre els dies de la setmana, cantar les cançonetes de l'oratge o comprovar quin menú hi haurà en el menjador. Molt fàcil de personalitzar.",
+                    "filename":"assembleainfantil.zip"
                      },
                 {
-                   "id":"as2",
-                   "title":"Assemblea 2",
-                   "description":"Descripció assemblea 2",
-                   "filename":"as2.zip"
-                    },
-                {
-                    "id":"as3",
-                    "title":"Assemblea 3",
-                    "description":"Descripció assemblea 3",
-                    "filename":"as3"
-                     }
+                   "id":"as_prim",
+                   "title":"Assemblea de primària",
+                   "description":"proposta d'assemblea per als més menuts de l'etapa de primària. Amb aquest model, els xiquets aprendran rodolins relacionats amb els dies de la setmana i els mesos de l'any; podran comprovar quin serà el menú del menjador o l'horari d'activitats per a la jornada.​",
+                   "filename":"assembleaprimaria.zip"
+                    }
                 ]
             }
         }
