@@ -32,6 +32,19 @@ class helperView{
             });
         }
 
+        // Binding Resources Links
+        var rsclinks=document.querySelectorAll("span.racotic_link_video");
+        for (var i=0; i<rsclinks.length;i++){
+            // console.log("binding with "+i);
+        
+            rsclinks[i].addEventListener("click", function(e){
+                var playlist=e.target.getAttribute("href");
+                if (playlist==null) playlist=e.target.parentNode.getAttribute("href");
+                self.loadVideo(playlist);
+            });
+        }
+
+
         
     }
 
@@ -180,6 +193,19 @@ class helperView{
     }
 
 
+    loadVideo(playlist){
+        $.get( window.location+playlist,
+            function( data ) {
+                //console.log(rscData);
+                $("#mainContainer").empty();
+                var content="<h1>Videotutorials</h1>";
+                content+="<p>En aquesta secció trobareu diversos videotutorials que expliquen el funcionament de l'eina ClassJam. Utilitzeu el botó de la part superior-esquerra del vídeo per desplegar la llista de vídeos del tutorial.</p>";
+                content+="<div style='text-align:center'>";
+                content+=data+"</div>";
+                $("#mainContainer").html(content);
+            });
+
+    }
 
 
     loadRsc(rsc){

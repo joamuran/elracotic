@@ -23,7 +23,7 @@ class Controller {
             // removing "elracotic" if we are on localhost
             array_shift($url);
         }
-        
+
         $this->_method = strtolower(array_shift($url));  
         $this->_arglist = $url;
 
@@ -69,6 +69,12 @@ class Controller {
             }
 
             break;
+
+
+            case "videos":
+
+                echo '<iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLCk7L5XSES_qm6PIB3DusxqL10_5eeJpS" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+                    break;
 
             case "getpdf":
                 // Count argument list to distinguish if it's a general help or a page

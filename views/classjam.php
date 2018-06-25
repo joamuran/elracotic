@@ -64,7 +64,7 @@ echo $reader->processText($text);
     <!-- Go to videos -->
     <div class="col-lg-4 col-md-6 sb-preview text-center">
         <div class="card h-100">
-            <span class="sb-preview-img racotic_link_help" href="help/class_jam">
+            <span class="sb-preview-img racotic_link_video" href="videos/class_jam">
             <img class="card-img-top" src="./views/media/classjam_videotutorials.png" alt="ClassJam Manual" />
             </span>
             <div class="card-body">
