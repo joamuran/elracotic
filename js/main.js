@@ -11,7 +11,7 @@ class MyCMS{
         //$.get( "http://127.0.0.1/elracotic/getdoc/example.md",
         $.get( window.location+"getdoc/example.md",
         function( data ) {
-            console.log((data));
+            //console.log((data));
             $("#mdDoc").append(data);
             
           });

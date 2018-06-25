@@ -18,8 +18,12 @@ class Controller {
         $url = array_filter($url);   // Filter content for url with multiples ///
          
 
-        // removing "elracotic"
-        array_shift($url);
+
+        if ($_SERVER["HTTP_HOST"]=="127.0.0.1"){
+            // removing "elracotic" if we are on localhost
+            array_shift($url);
+        }
+        
         $this->_method = strtolower(array_shift($url));  
         $this->_arglist = $url;
 

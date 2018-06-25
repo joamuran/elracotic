@@ -38,7 +38,7 @@ class helperView{
     createMenu(item, menuid, helpManual){
         var self=this;
 
-        console.log(item);
+        //console.log(item);
 
         var ul=document.createElement("ul");
         ul.setAttribute("id", menuid);
