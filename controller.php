@@ -111,9 +111,28 @@ class Controller {
 
             case "downloadresource":
                 $rsc=$this->_arglist[0];
-                header('Content-Description: File Transfer');
+                /*header('Content-Description: File Transfer');
                 header('Content-Type: application/octet-stream');
-                require("views/rsc/".$rsc);
+                require("views/rsc/".$rsc);*/
+                $file = "views/rsc/".$rsc;
+                if (is_file($file))
+                {
+                    //sendHeaders($file, 'application/octet-stream', $rsc);
+                    header('Content-Description: File Transfer');
+                    header('Content-Type: application/octet-stream');
+                    
+                    $chunkSize = 1024 * 1024;
+                    $handle = fopen($file, 'rb');
+                    while (!feof($handle))
+                    {
+                        $buffer = fread($handle, $chunkSize);
+                        echo $buffer;
+                        ob_flush();
+                        flush();
+                    }
+                    fclose($handle);
+                    exit;
+                }
             break;
 
             default:

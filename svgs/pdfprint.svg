@@ -14,7 +14,10 @@
    sodipodi:docname="pdfprint.svg"
    inkscape:version="0.92.3 (unknown)"
    width="40"
-   height="37.583515">
+   height="37.583515"
+   inkscape:export-filename="/srv/vcs/github/elracotic/css/icons/printer.png"
+   inkscape:export-xdpi="307.20001"
+   inkscape:export-ydpi="307.20001">
   <metadata
      id="metadata911">
     <rdf:RDF>
@@ -38,16 +41,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1143"
-     inkscape:window-height="807"
+     inkscape:window-width="1280"
+     inkscape:window-height="965"
      id="namedview907"
      showgrid="false"
      inkscape:zoom="10.282511"
      inkscape:cx="16.882847"
      inkscape:cy="9.5288841"
-     inkscape:window-x="28"
-     inkscape:window-y="111"
-     inkscape:window-maximized="0"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg905" />
   <rect
      x="5"
